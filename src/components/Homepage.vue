@@ -14,7 +14,15 @@ export default {
     
 
 
-<style scope lang = "scss">
+<style scoped lang="scss">
+.ss {
+  color: #ffffff;
+  text-align: left;
+  padding-left: 5cm;
+  border-bottom: 1px solid #ffffff;
+  margin-top: 3vh;
+}
+
 .head {
   margin: 0;
   text-align: left;
@@ -25,25 +33,5 @@ export default {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: black;
   padding-left: 0.5cm;
-}
-.ss {
-  color: #ffffff;
-  text-align: left;
-  padding-left: 5cm;
-  border-bottom: 1px solid #ffffff;
-  margin-top: 3vh;
-}
-div {
-  width: 100%;
-}
-
-* {
-  box-sizing: border-box;
-  padding-left: 5cm;
-}
-
-body {
-  background-color: rgb(20, 24, 28);
-  margin: 0%;
 }
 </style>
