@@ -1,14 +1,10 @@
 <template>
   <div>
-    <h1 class="head">
-      <b>ProG reviews</b>
-    </h1>
-
     <div class="phone-list">
       <div class="ss">
         <b>Samsung</b>
       </div>
-      <div class="ssphone" v-for="p in Samsung" :key="p.id">
+      <router-link :to = "'/'+p.name" class="ssphone" v-for="p in Samsung" :key="p.id">
         <div>
           <img :src="p.pic" :alt="p.name" />
         </div>
@@ -20,11 +16,11 @@
             <b>{{p.price}}</b>
           </p>
         </span>
-      </div>
+      </router-link>
       <div class="hw">
         <b>Huawei</b>
       </div>
-      <div class="hwphone" v-for="p in Huawei" :key="p.id">
+      <router-link :to = "'/'+p.name" class="hwphone" v-for="p in Huawei" :key="p.id">
         <div>
           <img :src="p.pic" :alt="p.name" />
         </div>
@@ -36,7 +32,7 @@
             <b>{{p.price}}</b>
           </p>
         </span>
-      </div>
+      </router-link>
       <div class="op">
         <b>Oppo</b>
       </div>
@@ -89,14 +85,14 @@ export default {
     Huawei: [
       {
         id: 1,
-        name: "Huawei p40",
+        name: "Huawei P40",
         price: "22,990 ฿",
         pic:
           "https://s.isanook.com/hi/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMjk5LzE0OTc5NTcvaHVhd2VpLXA0MC0wMS5qcGc=.jpg"
       },
       {
         id: 2,
-        name: "Huawei p40 pro",
+        name: "Huawei P40 Pro",
         price: "31,990 ฿",
         pic:
           "https://s.isanook.com/hi/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMjk5LzE0OTc5NTcvaHVhd2VpLXA0MC1wcm8tci5qcGc=.jpg"
@@ -138,6 +134,7 @@ export default {
   background-color: rgb(20, 24, 28);
   &:hover {
     background-color: rgba(255, 254, 254, 0.05);
+    cursor: pointer;
   }
 }
 .opphone {
@@ -153,6 +150,7 @@ export default {
   background-color: rgb(20, 24, 28);
   &:hover {
     background-color: rgba(255, 254, 254, 0.05);
+    cursor: pointer;
   }
 }
 .hwphone {
@@ -166,9 +164,9 @@ export default {
   transition: all 0.25s ease-out, visibility 0s;
   transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
-  background-color: rgb(20, 24, 28);
   &:hover {
     background-color: rgba(255, 254, 254, 0.05);
+    cursor: pointer;
   }
 }
 
@@ -195,8 +193,6 @@ img {
   font-size: 45px;
   font-weight: 400;
   color: #ffffff;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
   background-color: black;
   padding-left: 2cm;
 }
