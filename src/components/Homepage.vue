@@ -4,7 +4,7 @@
       <div class="ss">
         <b>Samsung</b>
       </div>
-      <router-link :to = "'/'+p.name" class="ssphone" v-for="p in Samsung" :key="p.id">
+      <router-link :to="'/'+p.name" class="ssphone" v-for="p in Samsung" :key="p.id">
         <div>
           <img :src="p.pic" :alt="p.name" />
         </div>
@@ -20,7 +20,7 @@
       <div class="hw">
         <b>Huawei</b>
       </div>
-      <router-link :to = "'/'+p.name" class="hwphone" v-for="p in Huawei" :key="p.id">
+      <router-link :to="'/'+p.name" class="hwphone" v-for="p in Huawei" :key="p.id">
         <div>
           <img :src="p.pic" :alt="p.name" />
         </div>
@@ -36,7 +36,7 @@
       <div class="op">
         <b>Oppo</b>
       </div>
-      <div class="opphone" v-for="p in Oppo" :key="p.id">
+      <router-link :to="'/'+p.name" class="opphone" v-for="p in Oppo" :key="p.id">
         <div>
           <img :src="p.pic" :alt="p.name" />
         </div>
@@ -48,7 +48,7 @@
             <b>{{p.price}}</b>
           </p>
         </span>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -88,14 +88,14 @@ export default {
         name: "Huawei P40",
         price: "22,990 ฿",
         pic:
-          "https://s.isanook.com/hi/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMjk5LzE0OTc5NTcvaHVhd2VpLXA0MC0wMS5qcGc=.jpg"
+          "https://media-dtaconline.dtac.co.th/catalog/product/cache/e96373d1c57081d0b326a3dfa1f55e67/h/u/huawei-p40-silver_7.png"
       },
       {
         id: 2,
         name: "Huawei P40 Pro",
         price: "31,990 ฿",
         pic:
-          "https://s.isanook.com/hi/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMjk5LzE0OTc5NTcvaHVhd2VpLXA0MC1wcm8tci5qcGc=.jpg"
+          "https://media-dtaconline.dtac.co.th/catalog/product/cache/e96373d1c57081d0b326a3dfa1f55e67/h/u/huawei-p40-pro-blue_8.png"
       }
     ],
     Oppo: [
@@ -160,7 +160,7 @@ export default {
   height: 141px;
   border-radius: 15px;
   margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-bottom: 0.5vh;
   transition: all 0.25s ease-out, visibility 0s;
   transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
@@ -205,11 +205,11 @@ img {
   margin-bottom: 0.15cm;
 }
 .hw {
+  margin-top: 2.5cm;
   width: 700px;
   color: #ffffff;
   text-align: left;
   border-bottom: 1px solid #ffffff;
-  margin-top: 2.5cm;
   margin-bottom: 0.15cm;
 }
 .op {
